@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset = "utf-8">
+    <title>Choose Your Own Adventure</title>
+    <!--Main CSS-->
+    <link rel = "stylesheet" href = "CYOA.css">
+    <!--Retro game font-->
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <!--Dialogue Database-->
+    <script src = "CYOA_Dialogue_Database.js"></script>
+    <!--Dungeon Rooms Database-->
+    <script src = "CYOA_Dungeon_Database.js"></script>
+    <!--Items Database-->
+    <script src = "CYOA_Item_Database.js"></script>
+    <!--GetId Function-->
+    <script src = "getId_Function.js"></script>
+    <!--screenWrite Function-->
+    <script src = "screenWrite_Function.js"></script>
+  </head>
+  <body id = "body" onkeypress="keyPress(event)">
+    
+    <button id = "pressStart" onclick = "keyPress('13')">&lt;press start&gt;</button>
+    
+    <p id = "version">ver 1.0.0</p>
+    
+    <p id = "copyright">&copy; Mathias Bruggemann</p>
+    
+    <p id = "loading"></p>
+    
+    <div id = "charCreate" style = "display: block">
+      <!--Character Creation-->
+    
+    <!--<div id = 'intro' style = 'display: none;'>-->
+    <!--  <img src = 'https://dipwizard.com/wp-content/uploads/DipWizard-Logo.png'>-->
+    <!--  <h1>Welcome to Central Earth! I am Doubledoor! I see you have travelled far!</h1>-->
+    <!--  <h2 class = 'green'>If you please, who are you?</h2>-->
+    <!--  <br><br>-->
+    <!--  <form>-->
+    <!--    <p>Race: </p>-->
+    <!--    <select id = 'charRace'>-->
+    <!--      <option>Elf</option>-->
+    <!--      <option>Human</option>-->
+    <!--      <option>Dwarf</option>-->
+    <!--      <option>Flobbit</option>-->
+    <!--      <option>Centaur</option>-->
+    <!--      <option>Fairy</option>-->
+    <!--      <option>Marsh-Wiggle</option>-->
+    <!--    </select>-->
+        
+    <!--    <br><br><br>-->
+        
+    <!--    <p>Class: </p>-->
+    <!--    <select id = 'charClass'>-->
+    <!--      <option>Basic Warrior</option>-->
+    <!--      <option>Berzerker</option>-->
+    <!--      <option>Rogue</option>-->
+    <!--      <option>Druid</option>-->
+    <!--      <option>Mage</option>-->
+    <!--      <option>Trader</option>-->
+    <!--    </select>-->
+        
+    <!--    <br><br><br><br><br><br>-->
+        
+    <!--    <input type = 'button' value = 'Huzzah!' onclick = 'next()'>-->
+    <!--  </form>-->
+    <!--</div>-->
+      
+    </div>
+    
+    <div id = "mainGame" style = "display: none">
+      <div id = "sidebar">
+        
+        <img src = "" id = "charPic">
+        <center><h2 id = "name">Achilles Silverbow</h2></center>
+        <center><p id = "type">Elf Wizard</p></center>
+        
+        <div id = "stats">
+          <img src = "Sprites/Icons/Heart.png">
+          <p id = "HP">10</p>
+          <img src = "Sprites/Icons/Coin.png">
+          <p id = "gold">1000</p>
+          <br>
+          <p id = "ability">Ability: </p>
+          <br>
+          <p id = "weapon1">Weapon 1: </p>
+          <br>
+          <p id = "weapon2">Weapon 2: </p>
+          <br>
+          <p id = "armour">Armour: </p>
+          <br>
+          <p id = "melee">Melee Atk: </p>
+          <br>
+          <p id = "ranged">Ranged Atk: </p>
+          <br>
+          <p id = "magicAtk">Magic Atk: </p>
+          <br>
+          <p id = "magicDef">Magic Def: </p>
+          <br>
+          <p id = "tough">Toughness: </p>
+          <br>
+        </div>
+        
+        <center>
+          <div id = "level">
+            <center>
+            <h2 id = "levelNum">1</h2>
+            <p id = "levelText">Lvl:</p>
+            </center>
+          </div>
+        </center>
+        
+        
+      </div>
+      
+      <div id = "gameSpace">
+        <h1></h1>
+      </div>
+      
+      <div id = "miniMapDiv">
+        <center>
+          
+          <!--Mini Map-->
+          <canvas id = "miniMap" width = "200px" height = "200px" style = "display: block"></canvas>
+          
+          <!--Battle Mode-->
+          <div id = "battleMode" style = "display: none">
+            
+            <div id = "charFight">
+                <div id = "charFightPicDiv">
+                  <img src = "Sprites/Races/Centaur/Centaur_Basic-Warrior.png" id = "charFightPic">
+                </div>
+                <div id = "charFightStats">
+                  <center>
+                    <p>HP:</p>
+                    <p id = "charFightHP">100</p>
+                  </center>
+                </div>
+            </div>
+            
+            <div id = "enemyFight">
+                <div id = "enemyFightStats">
+                  <center>
+                    <p>HP:</p>
+                    <p id = "enemyFightHP">100</p>
+                  </center>
+                </div>
+                <div id = "enemyFightPicDiv">
+                  <img src = "Sprites/Monsters/Skeleton.png" id = "enemyFightPic">
+                </div>
+            </div>
+            
+          </div>
+          
+          
+        </center>
+      </div>
+      
+    </div>
+    
+    <div>
+      <h1 id = "gameOver" style = "display: none">You have fallen into shadow</h1>
+    </div>
+    
+    
+    
+    
+    <!--All Powerfull Javascript-->
+    <script src = "CYOA.js"></script>
+    
+  </body>
+  
+  
+  
+</html>

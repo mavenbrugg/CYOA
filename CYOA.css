@@ -1,0 +1,300 @@
+* {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+  color: white;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+#pressStart {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  text-align: center;
+  width: 20%;
+  color: #66cd00;
+  font-size: 1rem;
+  background-color: black;
+  border: none;
+}
+
+#version {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  font-size: 0.5rem;
+}
+
+#copyright {
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+  font-size: 0.5rem;
+}
+
+#gameOver {
+  position: absolute;
+  top: 45%;
+  left: 30%;
+  text-align: center;
+  width: 40%;
+  color: #000000;
+  font-size: 2rem;
+  background-color: black;
+  border: none;
+  transition: color 8s;
+}
+
+/*#gameOver:hover {*/
+/*  color: #FFFFFF;*/
+/*}*/
+
+button:active {
+  outline: none;
+}
+
+#loading {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  width: 20%;
+  font-size: 1rem;
+}
+
+img {
+  height: 200px;
+  width: auto;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+.green {
+  color: lime;
+}
+
+select {
+  background-color: black;
+  border-width: 3px;
+  border-color: white;
+  padding: 5px;
+  color: lime;
+}
+
+input {
+  background-color: black;
+  border-width: 3px;
+  border-color: white;
+  padding: 5px;
+}
+
+
+
+/*----------------------Sidebar Stuff----------------------*/
+
+#sidebar {
+  position: fixed;
+  border-left: 2px solid white;
+  width: 25%;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+
+#sidebar h2 {
+  width: 95%;
+  word-wrap: break-word;
+  margin-bottom: -0.25rem;
+}
+
+#sidebar #charPic {
+  display: block;
+  height: 7rem;
+  width: auto;
+  margin: 1rem auto;
+}
+
+#sidebar #stats{
+  margin: 0 1rem;
+}
+
+#sidebar p {
+  font-size: 0.8rem;
+  display: inline-block;
+  margin: 8px 0;
+}
+
+#sidebar span {
+  font-size: 0.8rem;
+}
+
+#sidebar #stats img {
+  display: inline;
+  width: 1.2rem;
+  height: auto;
+  margin: 0;
+}
+
+#sidebar #level {
+  margin-top: 5rem;
+}
+
+#sidebar #level #levelNum {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+#sidebar #level #levelText {
+  text-align: center;
+  padding-left: 5px;
+}
+
+
+
+
+
+
+/*----------------------Game Space Stuff----------------------*/
+
+#gameSpace {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 74%;
+  height: 63%;
+  overflow: auto;
+}
+
+#gameSpace input {
+  border: none;
+  /*caret-color: white;*/
+  width: 90%;
+}
+
+#gameSpace input:focus {
+  outline: none;
+}
+
+#gameSpace img {
+  height: auto;
+}
+
+
+
+
+/*----------------------Mini Map Stuff----------------------*/
+
+#miniMapDiv {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 75%;
+  height: 35%;
+  border-top: 2px solid white;
+}
+
+#miniMap {
+  /*width: 200px;*/
+  /*height: 200px;*/
+  /*background-color: red;*/
+  margin-top: 12px;
+}
+
+
+
+
+/*----------------------Battle Mode Stuff----------------------*/
+
+#battleMode {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 100%;
+  /*background-color: blue;*/
+}
+
+
+#charFight  {
+  width: 45%;
+  height: 95%;
+  margin: 7px 0 0 7px;
+  padding: 0;
+  float: left;
+  /*background-color: red;*/
+}
+
+#charFightPicDiv{
+  float: left;
+  margin: 0;
+  width: 60%;
+  height: 100%;
+  /*background-color: orange;*/
+}
+
+#charFightStats {
+  float: right;
+  margin: 18% 0 0 0;
+  width: 40%;
+  height: 40%;
+  /*background-color: orange;*/
+}
+
+#charFightPicDiv img {
+  height: 100%;
+  width: auto;
+  margin: 0;
+}
+
+#charFightStats p {
+  text-align: center;
+}
+
+#enemyFight  {
+  width: 45%;
+  height: 95%;
+  margin: 7px 7px 0 0;
+  float: right;
+  /*background-color: green;*/
+}
+
+#enemyFightPicDiv{
+  float: right;
+  margin: 0;
+  width: 60%;
+  height: 100%;
+  /*background-color: orange;*/
+}
+
+#enemyFightStats {
+  float: left;
+  margin: 18% 0 0 0;
+  width: 40%;
+  height: 40%;
+  /*background-color: orange;*/
+}
+
+#enemyFightPic {
+  height: 100%;
+  width: auto;
+  margin: 0;
+}
+
+#enemyFightStats p {
+  text-align: center;
+}
+
+
+
+
+
+

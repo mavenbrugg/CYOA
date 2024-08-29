@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset = "utf-8">
+    <title>CYOA Dialogue Search</title>
+    <script src = "CYOA_Dialogue_Database.js"></script>
+  </head>
+  <body>
+    
+    <h1>CYOA Dialogue Search</h1>
+    
+    <p>Index to search:</p>
+    
+    <select id = "selectChar">
+      <option value = "wizSpeach">wizSpeach</option>
+    </select>
+    
+    <p>Search by:</p>
+    <select id = "inputType">
+      <option>Index #</option>
+      <option>Dialogue Text</option>
+    </select>
+    
+    
+    <input type = "text" id = "input">
+      
+    <button onclick="search()">Search</button>
+    
+    <p id = "output"></p>
+    
+    
+    <script>
+      
+      //Search the index
+      function search() {
+        //Get the selected index
+        var selectIndex = document.getElementById("selectChar").selectedIndex;
+        //Get the array of all the options
+        var options = document.getElementById("selectChar").options;
+        //Get the name of the selected index
+        var charSelected = options[selectIndex].text;
+        
+        //Get whether user is searching by index # or index text
+        var searchBy = document.getElementById("inputType").selectedIndex;
+        
+        //Search index
+        if (searchBy == 0) {//Search by index #
+          //Get the index number the user wants
+          var indexNum = Number(document.getElementById("input").value);
+          
+          //Search whatever index the user selected
+          if (charSelected == "wizSpeach") {
+            //Get the text of the index
+            var dialogue = wizSpeach[indexNum];
+            
+            //Output text
+            document.getElementById("output").innerHTML = "The text at index(" + indexNum + ") is: <br>" + dialogue;
+          }else {
+            document.getElementById("output").innerHTML = "Didn't work :(";
+          }
+          
+          
+        }else if (searchBy == 1) {//Search by index text
+          document.getElementById("output").innerHTML = "You actually can't search by text yet...";
+        }
+        
+        
+      }
+      
+      
+    </script>
+    
+  </body>
+</html>
